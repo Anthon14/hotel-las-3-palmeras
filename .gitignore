@@ -1,0 +1,13 @@
+# Credenciales de base de datos
+/config/conexion.php
+
+# Copia de base de datos local
+/database/hotel_db.sql
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Configuración del sistema operativo
+.DS_Store
+Thumbs.db

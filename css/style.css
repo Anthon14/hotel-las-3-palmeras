@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll suave al hacer clic en los botones */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ef;
+    color: #222;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar {
+    padding: 12px 25px;
+    z-index: 1000;
+}
+
+.nav-link {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #d4af37 !important;
+}
+
+/* =====================
+   PORTADA
+===================== */
+
+.hero {
+    height: 100vh;
+    background: url('../img/hotel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, .5);
+}
+
+.overlay p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, .5);
+}
+
+/* =====================
+   BOTONES PRINCIPALES
+===================== */
+
+.menu-hotel {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-menu {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    padding: 15px 30px;
+
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 15px;
+
+    transition: .3s;
+}
+
+.btn-menu:hover {
+    color: white;
+    background: #b8955f;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+}
+
+/* =====================
+   TARJETAS RESUMEN
+===================== */
+
+.resumen {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-admin {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+
+    transition: 0.3s;
+}
+
+.card-admin:hover {
+    transform: translateY(-8px);
+}
+
+.card-admin h3 {
+    color: #1f2926;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-admin p {
+    color: #666;
+}
+
+/* =====================
+   SECCIONES
+===================== */
+
+.modulo {
+    min-height: 100vh;
+    padding: 120px 0;
+    background: white;
+}
+
+.modulo-claro {
+    background: #f5f3ef;
+}
+
+.modulo h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1f2926;
+
+    margin-bottom: 20px;
+}
+
+.modulo p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer-admin {
+    background: #1f2926;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 992px) {
+
+    .resumen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .overlay h1 {
+        font-size: 2.8rem;
+    }
+
+    .overlay p {
+        font-size: 1.1rem;
+    }
+
+    .menu-hotel {
+        flex-direction: column;
+    }
+
+    .resumen {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+
+}
+
+.admin-page {
+    background: #f5f3ef;
+    overflow-x: hidden;
+}
+
+.admin-hero-small {
+    margin-top: 56px;
+    min-height: 320px;
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('../img/hotel.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.admin-hero-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.admin-hero-content p {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.admin-hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.admin-hero-content span {
+    font-size: 18px;
+}
+
+.admin-content {
+    padding: 60px 0;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-label {
+    color: #b8955f;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.admin-header h2 {
+    color: #1f2926;
+    font-weight: bold;
+}
+
+.admin-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+.admin-card .form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.admin-card .btn {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.navbar .navbar-logo {
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.navbar-brand {
+    width: auto !important;
+    height: auto !important;
+}
+
+.dashboard-logo {
+    width: 90px;
+    height: 52px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+.navbar-brand {
+    margin-right: 8px !important;
+}
+
+@media (max-width: 768px) {
+    .dashboard-logo {
+        width: 75px;
+        height: 44px;
+    }
+}
